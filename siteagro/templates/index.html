@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- font-family: 'Open Sans', sans-serif; -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i" rel="stylesheet">
-		<!-- build:css css/index.css -->
-		<link rel="stylesheet" href="{% static 'siteagro/main.css' %}" />
-		<link rel="stylesheet" href="{% static 'siteagro/index.css' %}" />
-		<link rel="stylesheet" href="assets/css/slick.css" />
-		<link rel="stylesheet" href="assets/css/slick-theme.css" />
-		<!-- endbuild -->
+		<!-- build:css css/index.css -->		
+		<link rel="stylesheet" href="{% static 'siteagro/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'siteagro/css/index.css' %}" />
+		<link rel="stylesheet" href="{% static 'siteagro/css/slick.css' %}" />
+		<link rel="stylesheet" href="{% static 'siteagro/css/slick-theme.css' %}" />		
+		<!-- endbuild -->		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -38,7 +38,7 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
+				<section id="banner" style="background-image: url({% static 'siteagro/images/banner.jpg' %})">
 					<header>
 						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
 						<a href="#" class="button">Learn More</a>
@@ -46,7 +46,10 @@
 				</section>
 
 			<!-- Highlights -->
-				<section class="wrapper style1">
+				
+
+			<!-- Gigantic Heading -->
+				<section class="wrapper style2">
 					<div class="container">
 						<div class="row">
                             {% for i in new %}
@@ -64,16 +67,6 @@
 									</section>
                             {% endfor %}
 						</div>
-					</div>
-				</section>
-
-			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
-					<div class="container">
-						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
-						</header>
 					</div>
 				</section>
 
@@ -101,9 +94,9 @@
 				<div id="footer">
 					<div class="container">
 						<div class="row">
-
+							
 							<section class="3u 6u$(narrower) 12u$(mobilep)">
-
+								
 							</section>
 							<section class="6u 12u(narrower) footer-form">
 								<h3>Свяжитесь с нами</h3>
@@ -155,13 +148,13 @@
 
 		<!-- Scripts -->
 			<!-- build:js scripts/combined.js -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/slick.min.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/slide.js"></script>
+			<script src="{% static 'siteagro/js/jquery.min.js'%}"></script>
+			<script src="{% static 'siteagro/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/skel.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/util.js' %}"></script>			
+			<script src="{% static 'siteagro/js/slick.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/main.js' %}"></script>
+			<script src="{% static 'siteagro/js/slide.js' %}"></script>
 			<!-- endbuild -->
 	</body>
 </html>

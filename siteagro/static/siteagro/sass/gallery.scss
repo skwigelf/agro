@@ -1,0 +1,26 @@
+.gallery-company-article {
+    .gallery-container {
+        text-align: justify;
+        &:after {
+            display: inline-block;
+            content: "";
+            width: 100%;
+        }
+        .gallery-col {
+            display: inline-block;
+            width: 30%;
+            height: 100px;
+            text-align: center;
+            img {
+                display: inline-block;
+            }
+            a:not(:first-child) {
+                display: inline-block;                
+                margin-top: 45px;                
+                &:first-child {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
