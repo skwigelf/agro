@@ -1,0 +1,25 @@
+.col {
+  box-sizing: border-box;
+  padding-left: 40px;
+  vertical-align: top;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .col .img-wrap {
+    width: 80px;
+    height: 80px;
+    vertical-align: top;
+    margin-right: 10px;
+    float: left; }
+    .col .img-wrap img {
+      width: 100%;
+      height: 100%; }
+  .col .text-news {
+    box-sizing: border-box; }
+    .col .text-news .heading {
+      padding: 0px;
+      font-size: 1em;
+      margin-bottom: 5px;
+      line-height: 0.75em; }
+    .col .text-news .article-news {
+      line-height: 1.2;
+      width: 100%; }
