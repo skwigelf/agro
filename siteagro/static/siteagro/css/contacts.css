@@ -1,0 +1,14 @@
+.map-col {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top; }
+
+.contact-col {
+  width: 54%;
+  display: inline-block;
+  vertical-align: top; }
+  .contact-col .address-block {
+    display: block; }
+  .contact-col .how-to-come {
+    margin-top: 15px;
+    display: inline-block; }
