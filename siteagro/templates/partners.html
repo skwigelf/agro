@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Партнеры{% endblock %}
+
+{% block stylesheets %}	
+	<link rel="stylesheet" href="{% static 'siteagro/css/partners.css' %}" />
+{% endblock %}
+
+{% block content %}
+	<section class="wrapper style1">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article class="about-company-article">
+									<header>
+										<h2>Партнеры</h2>										
+									</header>									
+
+									<div class="container-fluid">
+										<ul class="icons">
+											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+											<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+											<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+										</ul>
+									</div>
+								</article>
+						</div>
+						
+
+					</div>
+				</section>
+{% endblock %}

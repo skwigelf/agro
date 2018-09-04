@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="ru">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'siteagro/css/main.css' %}" />
+		{% block stylesheets %}{% endblock %}	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html" id="logo"><em>Суздаль Агропром</em></a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="{% url 'index' %}">Главная</a></li>
+								<li><a href="{% url 'about'%}">О компании</a></li>
+								<li><a href="">Услуги и цены</a></li>
+								<li><a href="">Галерея</a></li>
+								<li><a href="{% url 'contacts' %}">Контакты</a></li>
+								<li><a href="{% url 'partners' %}">Партнерам</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- CTA -->
+			{% block content%} {% endblock %}
+			
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							
+							<section class="3u 6u$(narrower) 12u$(mobilep)">
+								
+							</section>
+							<section class="6u 12u(narrower) footer-form">
+								<h3>Свяжитесь с нами</h3>
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(mobilep)">
+											<input type="text" name="name" id="name" placeholder="Имя" />
+										</div>
+										<div class="6u 12u(mobilep)">
+											<input type="email" name="email" id="email" placeholder="E-mail" />
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="message" id="message" placeholder="Сообщение" rows="5"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="Отправить" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; ООО "СуздальАгроПром", 2017</li><li>Веб-студия: <a href="www.aiwengo.ru">Aiwengo</a></li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<!-- build:js scripts/combined.js -->
+			<script src="{% static 'siteagro/js/jquery.min.js'%}"></script>
+			<script src="{% static 'siteagro/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/skel.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/util.js' %}"></script>			
+			<script src="{% static 'siteagro/js/slick.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/main.js' %}"></script>
+			<script src="{% static 'siteagro/js/slide.js' %}"></script>
+			<!-- endbuild -->
+	</body>
+
+</html>

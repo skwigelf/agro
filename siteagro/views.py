@@ -6,31 +6,23 @@ from .models import News
 
 
 def index(request):
-	if News.objects.exists():
-		ordered_news = News.objects.order_by('-pub_date')
-		if ordered_news.__len__()>=3:
-			ordered_news = ordered_news[:3]
-		return render(request, "index.html", {'new': ordered_news})
-	else:
-		ordered_news=None
-		return render(request, "index.html", {'new': ordered_news})
+    if News.objects.exists():
+        ordered_news = News.objects.order_by('-pub_date')
+        if ordered_news.__len__() >= 3:
+            ordered_news = ordered_news[:3]
+        return render(request, "index.html", {'new': ordered_news})
+    else:
+        ordered_news = None
+        return render(request, "index.html", {'new': ordered_news})
 
 
+def about(request):
+    return render(request, "about.html", {})
 
 
+def contacts(request):
+	return render(request, "contacts.html", {})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def partners(request):
+	return render(request, "partners.html", {})

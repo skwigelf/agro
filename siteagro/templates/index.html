@@ -1,87 +1,23 @@
-<!DOCTYPE HTML>
+{% extends "base.html" %}
 {% load static %}
-<html lang="ru">
-	<head>
-		<title>Arcana by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- font-family: 'Open Sans', sans-serif; -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i" rel="stylesheet">
-		<!-- build:css css/index.css -->		
-		<link rel="stylesheet" href="{% static 'siteagro/css/main.css' %}" />
-		<link rel="stylesheet" href="{% static 'siteagro/css/index.css' %}" />
-		<link rel="stylesheet" href="{% static 'siteagro/css/slick.css' %}" />
-		<link rel="stylesheet" href="{% static 'siteagro/css/slick-theme.css' %}" />		
-		<!-- endbuild -->		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	</head>
-	<body>
-		<div id="page-wrapper">
 
-			<!-- Header -->
-				<div id="header">
+{% block title %}Главная страница{% endblock %}
 
-					<!-- Logo -->
-						<h1><a href="index.html" id="logo"><em>Суздаль Агропром</em></a></h1>
+{% block stylesheets %}	
+	<link rel="stylesheet" href="{% static 'siteagro/css/index.css' %}" />
+	<link rel="stylesheet" href="{% static 'siteagro/css/slick.css' %}" />
+	<link rel="stylesheet" href="{% static 'siteagro/css/slick-theme.css' %}" />	
+{% endblock %}
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Главная</a></li>
-								<li><a href="about.html">О компании</a></li>
-								<li><a href="price.html">Услуги и цены</a></li>
-								<li><a href="gallery.html">Галерея</a></li>
-								<li><a href="contacts.html">Контакты</a></li>
-							</ul>
-						</nav>
-
-				</div>
-
-			<!-- Banner -->
-				<section id="banner" style="background-image: url({% static 'siteagro/images/banner.jpg' %})">
+{% block content %}
+	<section id="banner" style="background-image: url({% static 'siteagro/images/banner.jpg' %})">
 					<header>
 						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
 						<a href="#" class="button">Learn More</a>
 					</header>
 				</section>
 
-			<!-- Highlights -->
-				
-
-			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
-					<div class="container">
-						<div class="row">
-                            {% for i in new %}
-							<section class="col 4u 12u(narrower)">
-										<div class="img-wrap">
-										<img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt="">
-											</div>
-											<div class="text-news">
-											<h3 class="heading">{{i.head}}</h3>
-											<p class="article-news">{{i.text}}<a href="#">Читать далее</a></p>
-											<div class="time">
-												<span><strong>{{i.pub_date}}</strong></span>
-											</div>
-											</div>
-									</section>
-                            {% endfor %}
-						</div>
-					</div>
-				</section>
-
-			<!-- Posts -->
-				<section class="wrapper style1">
-					<div class="center">
-						<div><img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt=""></div>
-						<div><img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt=""></div>
-						<div><img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt=""></div>
-						<div><img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt=""></div>
-					</div>
-				</section>
-
-			<!-- CTA -->
-				<section id="cta" class="wrapper style3">
+	<section id="cta" class="wrapper style3">
 					<div class="container">
 						<header>
 							<h2>Are you ready to continue your quest?</h2>
@@ -89,72 +25,5 @@
 						</header>
 					</div>
 				</section>
+{% endblock %}
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
-							
-							<section class="3u 6u$(narrower) 12u$(mobilep)">
-								
-							</section>
-							<section class="6u 12u(narrower) footer-form">
-								<h3>Свяжитесь с нами</h3>
-								<form>
-									<div class="row 50%">
-										<div class="6u 12u(mobilep)">
-											<input type="text" name="name" id="name" placeholder="Имя" />
-										</div>
-										<div class="6u 12u(mobilep)">
-											<input type="email" name="email" id="email" placeholder="E-mail" />
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<textarea name="message" id="message" placeholder="Сообщение" rows="5"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Отправить" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-						</div>
-					</div>
-
-					<!-- Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-						</ul>
-
-					<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; ООО "СуздальАгроПром", 2017</li><li>Веб-студия: <a href="www.aiwengo.ru">Aiwengo</a></li>
-							</ul>
-						</div>
-
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<!-- build:js scripts/combined.js -->
-			<script src="{% static 'siteagro/js/jquery.min.js'%}"></script>
-			<script src="{% static 'siteagro/js/jquery.dropotron.min.js' %}"></script>
-			<script src="{% static 'siteagro/js/skel.min.js' %}"></script>
-			<script src="{% static 'siteagro/js/util.js' %}"></script>			
-			<script src="{% static 'siteagro/js/slick.min.js' %}"></script>
-			<script src="{% static 'siteagro/js/main.js' %}"></script>
-			<script src="{% static 'siteagro/js/slide.js' %}"></script>
-			<!-- endbuild -->
-	</body>
-</html>
