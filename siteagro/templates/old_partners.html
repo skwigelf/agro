@@ -1,16 +1,17 @@
 <!DOCTYPE HTML>
 {% load static %}
-<html lang="ru">
+<html>
 	<head>
-		<title>{% block title %}{% endblock %}</title>
+		<title>No Sidebar - Arcana by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i" rel="stylesheet">
+		<!-- build:css css/contacts.css -->		
 		<link rel="stylesheet" href="{% static 'siteagro/css/main.css' %}" />
-		{% block stylesheets %}{% endblock %}	
+		<link rel="stylesheet" href="{% static 'siteagro/css/partners.css' %}" />
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
-
 	<body>
 		<div id="page-wrapper">
 
@@ -23,20 +24,46 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="{% url 'index' %}">Главная</a></li>
-								<li><a href="{% url 'about'%}">О компании</a></li>
-								<li><a href="">Услуги и цены</a></li>
-								<li><a href="">Галерея</a></li>
-								<li><a href="{% url 'contacts' %}">Контакты</a></li>
-								<li><a href="{% url 'partners' %}">Партнерам</a></li>
+																
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="about.html">О компании</a></li>
+								<li><a href="price.html">Услуги и цены</a></li>
+								<li><a href="gallery.html">Галерея</a></li>
+								<li><a href="contacts.html">Контакты</a></li>
+								<li class="current"><a href="partners.html">Партнерам</a></li>
 							</ul>
 						</nav>
 
 				</div>
 
-			<!-- CTA -->
-			{% block content%} {% endblock %}
-			
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article class="about-company-article">
+									<header>
+										<h2>Партнеры</h2>										
+									</header>									
+
+									<div class="container-fluid">
+										<ul class="icons">
+											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+											<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+											<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+										</ul>
+									</div>
+								</article>
+						</div>
+						
+
+					</div>
+				</section>
+
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
@@ -96,13 +123,11 @@
 		<!-- Scripts -->
 			<!-- build:js scripts/combined.js -->
 			<script src="{% static 'siteagro/js/jquery.min.js'%}"></script>
-			<script src="{% static 'siteagro/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'siteagro/js/jquery.dropotron.min.js' %}"></script>			
 			<script src="{% static 'siteagro/js/skel.min.js' %}"></script>
-			<script src="{% static 'siteagro/js/util.js' %}"></script>			
-			<script src="{% static 'siteagro/js/slick.min.js' %}"></script>
-			<script src="{% static 'siteagro/js/main.js' %}"></script>
-			<script src="{% static 'siteagro/js/slide.js' %}"></script>
+			<script src="{% static 'siteagro/js/util.js' %}"></script>
+			<script src="{% static 'siteagro/js/main.js' %}"></script>		
 			<!-- endbuild -->
-	</body>
 
+	</body>
 </html>
