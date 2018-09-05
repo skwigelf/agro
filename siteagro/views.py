@@ -16,6 +16,10 @@ def index(request):
         return render(request, "index.html", {'new': ordered_news})
 
 
+def gallery(request):
+    return render(request, "gallery.html", {})
+
+
 def about(request):
     return render(request, "about.html", {})
 
