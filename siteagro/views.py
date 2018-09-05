@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # from django.shortcuts import get_object_or_404
-from .models import News
+from .models import News, Gallery, Goods
 
 # Create your views here.
 
@@ -17,7 +17,16 @@ def index(request):
 
 
 def gallery(request):
-    return render(request, "gallery.html", {})
+    if Gallery.objects.exists():
+        images = Gallery.objects.order_by("pk")
+
+    return render(request, "gallery.html", {"images": images})
+
+
+def prices(request):
+    if Goods.objects.exists():
+        goods = Goods.objects.order_by("pk")
+    return render(request, "prices.html", {"goods": goods})
 
 
 def about(request):

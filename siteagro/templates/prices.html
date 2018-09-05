@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Галерея{% endblock %}
+{% block title %}Услуги и цены{% endblock %}
 {% block stylesheets %}
 	<link rel="stylesheet" href="{% static 'siteagro/css/index.css' %}" />
 	<link rel="stylesheet" href="{% static 'siteagro/css/slick.css' %}" />
@@ -9,8 +9,11 @@
 {% endblock %}
 
 {% block content %}
-    {% for i in images %}
-        <img src="{{i.image.url}}" alt="">
+    {% for product in goods %}
+        <div class="product">
+            <h2>{{product.header}}</h2>
+            <img src="{{product.image.url}}" alt="">
+            <span>Цвет кожуры: {{product.kozhura}}</span><br>
+        </div>
     {% endfor %}
-    <div>sdgsdg</div>
 {% endblock %}
