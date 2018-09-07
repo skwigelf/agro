@@ -10,4 +10,5 @@ urlpatterns = [
     path('partners', views.partners, name='partners'),
     path('gallery', views.gallery, name="gallery"),
     path('prices', views.prices, name="prices"),
+    path('<int:new_id>/', views.detail, name='detail'),
 ]

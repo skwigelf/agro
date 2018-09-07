@@ -120,6 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/madfox/git/agro/media/'
 
-MEDIA_URL = ''
+MEDIA_URL = '/media/'

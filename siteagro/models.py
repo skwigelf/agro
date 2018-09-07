@@ -10,12 +10,12 @@ class News(models.Model):
 
 
 class Gallery(models.Model):
-    image = models.ImageField(upload_to="siteagro/static/siteagro/images/gallery")
+    image = models.ImageField(upload_to="gallery")
 
 
 class Goods(models.Model):
     header = models.TextField(max_length=100)
-    image = models.ImageField(upload_to="siteagro/static/siteagro/images/goods")
+    image = models.ImageField(upload_to="goods")
     kozhura = models.TextField(max_length=250)
     makot = models.TextField(max_length=250)
     forma = models.TextField(max_length=250)
