@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load chunks %}
 {% block title %}Главная страница{% endblock %}
 
 {% block stylesheets %}	
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-	<section id="banner" style="background-image: url({% static 'siteagro/images/banner.jpg' %})">
+	<section id="banner" style="background-image: url({% chunk 'index_background' %})">
 					<header>
 						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
 						<a href="#" class="button">Learn More</a>

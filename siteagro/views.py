@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 # from django.http import HttpResponse
 # from django.shortcuts import get_object_or_404
-from .models import News, Gallery, Goods
+from .models import News, Gallery, Goods, Partners
 
 # Create your views here.
 
@@ -47,4 +47,8 @@ def contacts(request):
 
 
 def partners(request):
-	return render(request, "partners.html", {"Partners":"current"})
+    if Partners.objects.exists():
+        images=Partners.objects.order_by("pk")
+    else:
+        images=None
+    return render(request, "partners.html", {"images":images, "Partners":"current"})
