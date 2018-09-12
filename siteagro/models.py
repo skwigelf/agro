@@ -1,5 +1,4 @@
 from django.db import models
-    
 # Create your models here.
 
 class Contacts(models.Model):
@@ -7,10 +6,11 @@ class Contacts(models.Model):
 
 
 class News(models.Model):
-    text = models.CharField(max_length=2000)
-    head = models.CharField(max_length=100)
-    pub_date = models.DateTimeField('date published')
-    
+    description = models.CharField('описание',help_text='краткое описание новости',max_length=50)
+    head = models.CharField('заголовок',max_length=100, help_text='поле для заголовка')
+    text = models.TextField('новость',help_text='полe для новости')
+    pub_date = models.DateTimeField('дата публикации')
+
 
 class Gallery(models.Model):
     image = models.ImageField(upload_to="gallery")
