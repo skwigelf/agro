@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load chunks %}
 {% block title %}Главная страница{% endblock %}
 
 {% block stylesheets %}	
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-	<section id="banner" style="background-image: url({% static 'siteagro/images/banner.jpg' %})">
+	<section id="banner" style="background-image: url({% chunk 'index_background' %})">
 					<header>
 						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
 						<a href="#" class="button">Learn More</a>
@@ -25,5 +25,25 @@
 						</header>
 					</div>
 				</section>
+	<section class="wrapper style2">
+					<div class="container">
+						<div class="row">
+                            {% for i in new %}
+							<section class="col 4u 12u(narrower)">
+										<div class="img-wrap">
+										<img src="http://orensmi.ru/wp-content/uploads/2016-05-09/article-8891_1.jpg" alt="">
+											</div>
+											<div class="text-news">
+											<h3 class="heading">{{i.head}}</h3>
+											<p class="article-news">{{i.description}}<a href="{{i.pk}}">...Читать далее</a></p>
+											<div class="time">
+												<span><strong>{{i.pub_date}}</strong></span>
+											</div>
+											</div>
+									</section>
+                            {% endfor %}
+						</div>
+					</div>
+				</section>	
 {% endblock %}
 

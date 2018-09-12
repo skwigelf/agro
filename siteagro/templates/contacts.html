@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load chunks %}
+<!--г.Суздаль, Владимирская обл.-->
 {% block title %}Контакты{% endblock %}
 
 {% block stylesheets %}	
@@ -27,10 +28,10 @@
 										</div>
 										<div class="contact-col">
 											<address class="address-block">
-												<p><strong>Адрес:</strong> г.Суздаль, Владимирская обл.</p>
-												<p><strong>Телефон:</strong> 8(499)555-66-77</p>
-												<p><strong>E-mail:</strong> <a href="#">service@agro.ru</a></p>
-												<p><strong>Skype:</strong> <a href="#">agro_suzdal</a></p>
+												<p><strong>Адрес:</strong>  {% chunk "contact_adress" %}</p>
+												<p><strong>Телефон:</strong> {% chunk "contact_number" %}</p>
+												<p><strong>E-mail:</strong> <a href="#">{% chunk "contact_email" %}</a></p>
+												<p><strong>Skype:</strong> <a href="#">{% chunk "contact_skype" %}</a></p>
 											</address>
 											<h3 class="how-to-come">Как проехать</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>

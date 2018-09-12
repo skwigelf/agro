@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'siteagro.apps.SiteagroConfig',
+    'chunks.apps.ChunksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,6 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/madfox/git/agro/media/'
 
-MEDIA_URL = ''
+MEDIA_URL = '/media/'

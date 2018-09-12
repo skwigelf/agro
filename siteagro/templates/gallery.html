@@ -9,8 +9,9 @@
 {% endblock %}
 
 {% block content %}
-    {% for i in images %}
+    <div>
+   	{% for i in images %}
         <img src="{{i.image.url}}" alt="">
     {% endfor %}
-    <div>sdgsdg</div>
+    </div>
 {% endblock %}
